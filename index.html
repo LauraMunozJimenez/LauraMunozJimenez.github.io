@@ -13,13 +13,14 @@ integrations: {
 } 
 };
   analytics.load("ezRpxVw8bqYITSktRDA18lVf6lKKl9nO");
-  analytics.ready(function() { 
-window.amplitude.setVersionName('3.0.1') 
+
+  analytics.page();
+    analytics.ready(function() { 
+window.amplitude.setVersionName('3.0.1'); 
 });
 analytics.ready(function() {
-window.ga('set', '&cu', 'KRW')
+window.ga('set', '&cu', 'KRW');
 });
-  analytics.page();
   }}();
 </script> 
 
