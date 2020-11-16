@@ -61,5 +61,16 @@
  
     <!--Placeholder for identify and track script -->
   
+  drift.on('ready', function (api) {
+  drift.on('startConversation', function (event) {
+    // Enter Google Analytics function here
+    analytics.track('Widget Opened', {
+      category: 'Drift Conversations',
+      action: 'Started Conversation',
+      conversation_id: event.conversationId,
+    });
+  })
+})
+  
     </body> 
 </html>
