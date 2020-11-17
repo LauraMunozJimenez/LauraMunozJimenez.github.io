@@ -91,16 +91,9 @@ drift.load('yv33wrk6s9s9');
   
   <script type="application/javascript">
   
-  drift.on('ready', function (api) {
-  drift.on('chatOpen', function (event) {
-    console.log('Chat is open!');
-    analytics.track('Widget Opened', {
-      category: 'Drift Conversations',
-      action: 'Started Conversation',
-      // conversation_id: event.conversationId,
-    });
-  });
-});
+  window.drift.on('chatOpen', function() {
+    console.log('Chat is open!')
+  })
 
   </script>
  
