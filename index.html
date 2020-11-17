@@ -42,10 +42,10 @@ drift.load('yv33wrk6s9s9');
 <!-- End of Async Drift Code -->
   
   <script>
-drift.on('ready',function(api) {
+window.drift.on('ready',function(api) {
   alert('Hola!');
-  window.drift.on("message:sent", function(data) {
-  console.log("User replied to conversation " + data.conversationId);
+  window.drift.on('sidebarOpen', function(data) {
+  alert('Abre!');
 });
   });
 })
