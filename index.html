@@ -13,7 +13,7 @@
   }}();</script>
   
 <!-- Start of Async Drift Code -->
-<script>
+<!-- <script>
 "use strict";
 
 !function() {
@@ -38,10 +38,10 @@
 }();
 drift.SNIPPET_VERSION = '0.3.1';
 drift.load('yv33wrk6s9s9');
-</script>
+</script> -->
 <!-- End of Async Drift Code --> 
   
-  <script>
+<!--   <script>
 drift.on('ready', function(api) {
   alert('Hola!');
   window.drift.on('sidebarOpen', function(data) {
@@ -50,7 +50,17 @@ drift.on('ready', function(api) {
   });
  });
 
-</script>
+</script> -->
+  
+    <script>
+analytics.ready(function() {
+  alert('Hola!');
+  window.drift.on('sidebarOpen', function(data) {
+    alert('Abre!');
+    analytics.track('Chat Widget Opened');
+  });
+ });
+ </script>
   
 </head> 
 <body> 
