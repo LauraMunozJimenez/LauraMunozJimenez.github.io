@@ -57,6 +57,12 @@ analytics.ready(function() {
         alert('Abre!');
         analytics.track('Chat Widget Opened');
     });
+  window.drift.on("message:sent", function(data) {
+      console.log("User replied to conversation " + data.conversationId);
+      analytics.track('Drift Message Sent', {
+         conversationId: data.conversationId 
+      });
+  });
 });
 
  </script>
