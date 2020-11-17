@@ -51,19 +51,20 @@ drift.on('ready', function(api) {
  });
 
 </script> -->
-
-<script>
-analytics.ready(function() {
-    alert('Hola!');
-//     window.drift.on('sidebarOpen', function(data) {
-//         alert('Abre!');
-//         analytics.track('Chat Widget Opened');
-//     });
- });
- </script>
   
 </head> 
 <body> 
+  
+  <script>
+analytics.ready(function() {
+    alert('Hola!');
+     window.drift.on('sidebarOpen', function(data) {
+         alert('Abre!');
+         analytics.track('Chat Widget Opened');
+     });
+ });
+ </script>
+  
 <h1>What is your favorite place to travel?</h1> 
 <p>I am building a directory of the sweetest travel destinations.</p>  
 
