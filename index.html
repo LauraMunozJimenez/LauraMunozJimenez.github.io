@@ -43,9 +43,10 @@ drift.load('yv33wrk6s9s9');
   
   <script>
 drift.on('ready',function(api) {
- alert('Hola!');
-   drift.on('chatClose', function() {
-    alert('Chat is closed!');
+  alert('Hola!');
+  window.drift.on("message:sent", function(data) {
+  console.log("User replied to conversation " + data.conversationId);
+});
   });
 })
 </script>
