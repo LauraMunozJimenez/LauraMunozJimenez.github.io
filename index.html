@@ -41,6 +41,11 @@ drift.load('yv33wrk6s9s9');
 </script>
 <!-- End of Async Drift Code -->
   
+ <script> 
+  drift.on('chatOpen', function() {
+    alert('Chat is open!');
+  });
+  </script> 
   
 </head> 
 <body> 
@@ -91,14 +96,6 @@ drift.load('yv33wrk6s9s9');
  
     <!--Placeholder for identify and track script -->
   
-    </body> 
-  
-  <script type="text/javascript">
-  
-  drift.on('chatOpen', function() {
-    alert('Chat is open!');
-  });
-
-  </script>
+    </body>
   
 </html>
