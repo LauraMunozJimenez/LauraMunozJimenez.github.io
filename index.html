@@ -46,6 +46,7 @@ drift.on('ready',function(api) {
   alert('Hola!');
   window.drift.on('sidebarOpen', function(data) {
     alert('Abre!');
+    analytics.track('Chat Widget Opened');
   });
  });
 
