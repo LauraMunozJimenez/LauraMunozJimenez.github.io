@@ -53,6 +53,10 @@ drift.on('ready', function(api) {
   <script>
 analytics.ready(function() {
     alert('Hola!');
+    window.drift.on('sidebarOpen', function(data) {
+        alert('Abre!');
+        analytics.track('Chat Widget Opened');
+    });
 });
 
  </script>
