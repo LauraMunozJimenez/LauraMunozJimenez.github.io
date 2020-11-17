@@ -42,7 +42,7 @@ drift.load('yv33wrk6s9s9');
 <!-- End of Async Drift Code --> -->
   
   <script>
-drift.on('ready',function(api) {
+analytics.ready(function() {
   alert('Hola!');
   window.drift.on('sidebarOpen', function(data) {
     alert('Abre!');
