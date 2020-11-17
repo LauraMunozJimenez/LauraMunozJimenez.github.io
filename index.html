@@ -12,8 +12,8 @@
   analytics.page();
   }}();</script>
   
-  <!-- Start of Async Drift Code -->
-<!-- <script>
+<!-- Start of Async Drift Code -->
+<script>
 "use strict";
 
 !function() {
@@ -39,10 +39,10 @@
 drift.SNIPPET_VERSION = '0.3.1';
 drift.load('yv33wrk6s9s9');
 </script>
-<!-- End of Async Drift Code --> -->
+<!-- End of Async Drift Code --> 
   
   <script>
-analytics.ready(function() {
+drift.on('ready', function(api, payload) {
   alert('Hola!');
   window.drift.on('sidebarOpen', function(data) {
     alert('Abre!');
