@@ -40,18 +40,11 @@ drift.SNIPPET_VERSION = '0.3.1';
 drift.load('yv33wrk6s9s9');
 </script>
 <!-- End of Async Drift Code -->
-  
- <script> 
-  drift.on('chatClose', function() {
-    alert('Chat is closed!');
-  });
-  </script> 
-  
   <script>
-        let d = new Date();
-        alert("Today's date is " + d);
-    </script>
-  
+drift.on('ready',function(api, payload) {
+ alert('Hola!');
+})
+</script>
 </head> 
 <body> 
 <h1>What is your favorite place to travel?</h1> 
@@ -101,6 +94,11 @@ drift.load('yv33wrk6s9s9');
  
     <!--Placeholder for identify and track script -->
   
+   <script> 
+  drift.on('chatClose', function() {
+    alert('Chat is closed!');
+  });
+  </script> 
     </body>
   
 </html>
