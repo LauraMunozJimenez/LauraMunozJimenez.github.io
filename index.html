@@ -68,18 +68,6 @@ analytics.ready(function() {
 
  </script>
   
-  
-<!-- Test for Teamleader   -->
-<script>
-
-  function getAnonID(){ 
-       var anonId = analytics.user().anonymousId();
-        analytics.track('url updated', {
-            url: 'https://lauramunozjimenez.github.io/ajs_aid=' + anonId
-        });
-  }
- </script>
-  
 </head> 
 <body> 
   
@@ -132,6 +120,17 @@ analytics.ready(function() {
       }
   </script>
  
+  <!-- Test for Teamleader   -->
+<script>
+
+  function getAnonID(){ 
+       var anonId = analytics.user().anonymousId();
+        analytics.track('url updated', {
+            url: 'https://lauramunozjimenez.github.io/ajs_aid=' + anonId
+        });
+  }
+ </script>
+  
     <!--Placeholder for identify and track script -->
   
     </body>
