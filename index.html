@@ -72,8 +72,12 @@ analytics.ready(function() {
 <!-- Test for Teamleader   -->
 <script>
 
-  var anonId = analytics.user().anonymousId();
-
+  function getAnonID(){ 
+       var anonId = analytics.user().anonymousId();
+        analytics.track('url updated', {
+            url: 'https://lauramunozjimenez.github.io/ajs_aid=' + anonId
+        });
+  }
  </script>
   
 </head> 
@@ -84,8 +88,9 @@ analytics.ready(function() {
 <p>I am building a directory of the sweetest travel destinations.</p>  
 
     
-    <form name="travel" onsubmit="identify(event)">
-     What is your favorite travel destination?
+<!--     <form name="travel" onsubmit="identify(event)"> -->
+    <form name="travel" onsubmit="getAnonID()">
+    What is your favorite travel destination?
     <input name="destination" required="" size="81" type="text"/> 
     <br><br><br> 
     Any recommendations (cool things to do, places to visit or restaurants to eat)? 
@@ -123,10 +128,6 @@ analytics.ready(function() {
         });
         analytics.track('destination submitted', user, function() {
             window.location.href = "";
-        });
-        
-        analytics.track('url updated', {
-            url: 'https://lauramunozjimenez.github.io/ajs_aid=' + anonId
         });
       }
   </script>
