@@ -136,7 +136,7 @@ analytics.ready(function() {
   const githubLink = "https://lauramunozjimenez.github.io/";
   
   function updateLink(){
-   document.getElementById('linkmolongui').href = githubLink + 'ajs_aid=' + analytics.user().anonymousId();
+   document.getElementById('linkmolongui').href = githubLink + '?ajs_aid=' + analytics.user().anonymousId();
    document.getElementById('linkmolongui').innerHTML = 'Clica aqui para comerte un mojon actualizado';
   }
   
