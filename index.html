@@ -64,6 +64,7 @@ analytics.ready(function() {
          conversationId: data.conversationId 
       });
   });
+  updateLink();
 });
 
  </script>
@@ -92,8 +93,9 @@ analytics.ready(function() {
     <br><br>
     <input name="submit" type="submit" value="submit"/>
     <br><br>
-      <a href="https://www.amazon.com">Clica aqui para comerte un mojon</a>
-    <input name="link" type="submit" value="submit"/>
+      <a id="linkmolongui" href="">Clica aqui para comerte un mojon</a>
+     <br><br>
+    <input name="hola" type="hola" value="hola"/>
 </form> 
     
     <script type="text/javascript">
@@ -130,6 +132,14 @@ analytics.ready(function() {
             url: 'https://lauramunozjimenez.github.io/ajs_aid=' + anonId
         });
   }
+  
+  const githubLink = "https://lauramunozjimenez.github.io/";
+  
+  function updateLink(){
+   document.getElementById('linkmolongui').href = githubLink + 'ajs_aid=' + analytics.user().anonymousId();
+   document.getElementById('linkmolongui').innerHTML = 'Clica aqui para comerte un mojon actualizado';
+  }
+  
  </script>
   
     <!--Placeholder for identify and track script -->
