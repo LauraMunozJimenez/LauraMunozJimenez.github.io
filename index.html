@@ -21,7 +21,7 @@
       let event = "Page Viewed";
       let properties = payload.properties();
       let context = payload.context();
-      let options = {"context": context, "integrations": integrations};
+      let options = {"context": context};
       analytics.track(event, properties, options);
       
       debugger;
