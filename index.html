@@ -15,13 +15,12 @@
   
       // Source Middleware
   var SMW1 = async function ({ payload, next, integrations }) {
-    alert('Middleware!' + payload.action());
     if (payload.action() === "page") {
       //transform page into track call
       payload.obj.type = "track";
       payload.obj.event = 'Page Viewed';
       //delete payload.obj['name'];
-      debugger;
+      alert('Middleware!');
     }
     next(payload);
   };
