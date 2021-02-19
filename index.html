@@ -16,11 +16,14 @@
       // Source Middleware
   var SMW1 = async function ({ payload, next, integrations }) {
     if (payload.action() === "page") {
-      //transform page into track call
-      payload.type = "track";
-      payload.obj.type = "track";
-      payload.obj.event = "Page Viewed";
-      //delete payload.obj['name'];
+      //Build track call
+      
+      let event = "Page Viewed";
+      let properties = payload.properties;
+      let context = payload.context;
+      let options = {"context": context, "integrations": integrations}
+      analytics.track(event, properties: properties, options: options)
+      
       debugger;
       alert(JSON.stringify(payload.obj));
     }
