@@ -15,7 +15,7 @@
   
       // Source Middleware
   var SMW1 = async function ({ payload, next, integrations }) {
-    alert('Middleware!');
+    alert('Middleware!' + payload.action());
     if (payload.action() === "page") {
       //transform page into track call
       payload.obj.type = "track";
