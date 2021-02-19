@@ -19,8 +19,8 @@
       //Build track call
       
       let event = "Page Viewed";
-      let properties = payload.properties;
-      let context = payload.context;
+      let properties = payload.properties();
+      let context = payload.context();
       let options = {"context": context, "integrations": integrations};
       analytics.track(event, properties, options);
       
