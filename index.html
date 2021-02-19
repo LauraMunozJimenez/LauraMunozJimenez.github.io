@@ -31,13 +31,18 @@
 //     analytics.addSourceMiddleware(SMW1);
 //     analytics.page("My Page Call");
 //     alert('Ready!');
-//   });    
+//   });  
+  
+  debugger;
   analytics.addSourceMiddleware(SMW1);
   analytics.load("ezRpxVw8bqYITSktRDA18lVf6lKKl9nO");
   analytics.page("My Page Call");
   // analytics.identify('user_id_123456');
   }}();
       
+      analytics.ready(function () {
+        debugger;
+       });
   </script>
   
 <!-- Start of Async Drift Code -->
