@@ -13,6 +13,7 @@
   }}();
   
   var SMW1 = async function ({ payload, next, integrations }) {
+    alert('Middleware!');
     if (payload.type() === "page") {
       //transform page into track call
       payload.type = "track";
