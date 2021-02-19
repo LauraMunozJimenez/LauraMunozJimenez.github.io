@@ -27,14 +27,10 @@
     }
   };
   
-  // analytics.ready(function () {
-  analytics.page("My Page Call");
-  
-  analytics.addSourceMiddleware(SMW1);
-  
-  analytics.page("My Page Call 2");
-  
-  // });    
+  analytics.ready(function () {
+    analytics.addSourceMiddleware(SMW1);
+    analytics.page("My Page Call");
+  });    
   
  
   // analytics.identify('user_id_123456');
