@@ -21,9 +21,9 @@
     }
     next(payload);
   };
-  analytics.ready(function () {
+  // analytics.ready(function () {
   analytics.addSourceMiddleware(SMW1);
-  });
+  // });
   
   analytics.page("My Page Call");
   // analytics.identify('user_id_123456');
