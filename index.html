@@ -20,7 +20,7 @@
       payload.obj.type = "track";
       payload.obj.event = "Page Viewed";
       //delete payload.obj['name'];
-      alert(payload.obj);
+      alert(JSON.stringify(payload.obj));
     }
     next(payload);
   };
