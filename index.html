@@ -9,11 +9,7 @@
   analytics.load("ezRpxVw8bqYITSktRDA18lVf6lKKl9nO");
   // analytics.track('Page Viewed'); Test for Kickstarte
   
-  // analytics.page("My Page Call");
-  // analytics.identify('user_id_123456');
-  }}();
-  
-  // Source Middleware
+   // Source Middleware
   var SMW1 = async function ({ payload, next, integrations }) {
     if (payload.action() === "page") {
       //Build track call
@@ -30,9 +26,19 @@
       next(payload);
     }
   };
-  analytics.ready(function () {
-    analytics.addSourceMiddleware(SMW1);
-  });    
+  
+  // analytics.ready(function () {
+  analytics.page("My Page Call");
+  
+  analytics.addSourceMiddleware(SMW1);
+  
+  analytics.page("My Page Call 2");
+  
+  // });    
+  
+ 
+  // analytics.identify('user_id_123456');
+  }}();
       
   </script>
   
