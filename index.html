@@ -17,6 +17,7 @@
   var SMW1 = async function ({ payload, next, integrations }) {
     if (payload.action() === "page") {
       //transform page into track call
+      payload.type = "track";
       payload.obj.type = "track";
       payload.obj.event = "Page Viewed";
       //delete payload.obj['name'];
