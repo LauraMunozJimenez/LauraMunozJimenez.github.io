@@ -18,9 +18,9 @@
     if (payload.action() === "page") {
       //transform page into track call
       payload.obj.type = "track";
-      payload.obj.event = 'Page Viewed';
+      payload.obj.event = "Page Viewed";
       //delete payload.obj['name'];
-      alert('Middleware!');
+      alert(payload.obj);
     }
     next(payload);
   };
