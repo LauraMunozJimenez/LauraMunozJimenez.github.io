@@ -12,18 +12,18 @@
   // Source Middleware
   var SMW1 = async function ({ payload, next, integrations }) {
     alert('Middleware!');
-    if (payload.obj.type() === "page") {
+    if (payload.action() === "page") {
       //transform page into track call
       payload.obj.type = "track";
       payload.obj.event = 'Page Viewed';
       //delete payload.obj['name'];
+      debugger;
     }
     next(payload);
   };
   analytics.ready(function () {
   analytics.addSourceMiddleware(SMW1);
   });
-  
   
   analytics.page("My Page Call");
   // analytics.identify('user_id_123456');
